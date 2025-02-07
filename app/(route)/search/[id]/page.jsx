@@ -1,10 +1,13 @@
 "use client";
 
+import React, { useState } from "react";
 import AppSidebar from "@/components/Homepage/AppSidebar";
-import Homepage from "@/components/Homepage/Homepage";
-import { useState } from "react";
+import SearchPage from "@/components/Search/SearchPage";
+import { useParams } from "next/navigation";
 
 const Page = () => {
+  const params = useParams();
+  const searchQuery = params.id.split("--")[0].replace(/-/g, " ");
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
   return (
@@ -16,9 +19,9 @@ const Page = () => {
       <div
         className={`flex-1 ${
           isSidebarCollapsed ? "md:ml-[5rem]" : "md:ml-[13rem]"
-        } transition-all duration-300 mt-4 mb-4 mr-4 max-h-[90%] w-full bg-[#191A1A] md:rounded-lg border-[0.1px] border-slate-600 overflow-hidden`}
+        } transition-all duration-300 mt-4 mb-4 mr-4 max-h-[90%] w-full bg-[#191A1A] md:rounded-lg border-[0.1px] border-slate-600`}
       >
-        <Homepage />
+        <SearchPage searchMasterQuery={searchQuery} />
       </div>
     </div>
   );

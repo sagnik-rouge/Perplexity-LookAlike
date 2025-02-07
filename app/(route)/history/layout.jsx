@@ -1,9 +1,9 @@
-import React from 'react'
+"use client";
 
-const layout = () => {
-  return (
-    <div>layout</div>
-  )
-}
+import React from "react";
 
-export default layout
+const layout = ({ children }) => {
+  return <div>{children}</div>;
+};
+
+export default layout;

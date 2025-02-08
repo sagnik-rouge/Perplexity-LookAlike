@@ -46,9 +46,9 @@ export default function AppSidebar({ onCollapse }) {
             onClick={handleCollapse}
             src={"/collapse.svg"}
             alt="Collapse"
-            width={32}
-            height={32}
-            className="cursor-pointer mr-3"
+            width={30}
+            height={30}
+            className="p-1 cursor-pointer mr-3 hover:bg-[#2c2e2e] rounded-full transition-all duration-500"
           />
         )}
       </div>
@@ -90,14 +90,12 @@ export default function AppSidebar({ onCollapse }) {
       <div className="mt-auto px-4 py-4 w-full absolute bottom-0 left-0 right-0">
         {!collapsed && (
           <div className="flex flex-col gap-2">
-            <button
-              className="w-full py-2 bg-cyan-500 hover:bg-cyan-700 rounded-md text-black cursor-pointer"
-            >
+            <button className="w-full py-2 bg-cyan-500 hover:bg-cyan-700 rounded-md text-black transition-all duration-300">
               Sign Up
             </button>
             <button
               onClick={() => alert("Login triggered!")}
-              className="w-full py-2 bg-[#2c2e2e] hover:bg-[#2c2e2e]/70 rounded-md text-white"
+              className="w-full py-2 bg-[#2c2e2e] hover:bg-[#2c2e2e]/70 rounded-md text-white hover:text-gray-400 transition-all duration-300"
             >
               Login
             </button>
@@ -114,7 +112,7 @@ export default function AppSidebar({ onCollapse }) {
               alt="Expand"
               width={60}
               height={60}
-              className="rotate-180"
+              className="p-2 rotate-180 bg-[#2c2e2e] rounded-full hover:bg-[#2c2e2e]/50 transition-all duration-500 hover:scale-90"
             />
           </button>
         )}

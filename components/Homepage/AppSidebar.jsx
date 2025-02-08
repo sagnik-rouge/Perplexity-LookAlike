@@ -30,7 +30,7 @@ export default function AppSidebar({ onCollapse }) {
   return (
     <aside
       className={`fixed top-0 left-0 h-screen bg-[#202222] text-white transition-all duration-300 ${
-        collapsed ? "w-[5rem]" : "w-[12rem]"
+        collapsed ? "w-[5rem]" : "w-[13rem]"
       }`}
     >
       {/* Sidebar Header */}

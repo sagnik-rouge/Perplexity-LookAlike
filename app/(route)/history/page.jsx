@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import AppSidebar from "@/components/Homepage/AppSidebar";
 import SearchPage from "@/components/Search/SearchPage";
+import Homepage from "@/components/Homepage/Homepage";
 
 const Page = () => {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);

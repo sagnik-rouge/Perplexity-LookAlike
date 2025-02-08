@@ -40,7 +40,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <main className="flex flex-1 flex-col relative">
+      <main className="flex flex-1 flex-col">
         <div className="flex-1 overflow-y-auto pb-32">
           <div className="flex flex-col h-[calc(100vh-12rem)] justify-center items-center space-y-8">
             <div className="max-w-2xl text-center space-y-4">
@@ -61,12 +61,12 @@ const Homepage = () => {
                 ))}
               </div>
             </div>
+          <div className="absolute bottom-10 right-0 left-56">
+            <Footer />
+          </div>
           </div>
         </div>
       </main>
-      <div className="absolute bottom-16 right-0 left-0">
-        <Footer />
-      </div>
     </div>
   );
 };
